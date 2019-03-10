@@ -112,6 +112,7 @@ function blockMagement(conf)
   */
 	function injectToken(req, res)
 	{
+		NEXT_BLOCK();
 		if(!req.param.target)
 		{
 			wf.httpUtil.dataError(req, res, "Error", "Missing amount", 500, "1.0");
